@@ -16,7 +16,7 @@ public class NotificationController {
         this.messagingTemplate = messagingTemplate;
     }
 
-    @MessageMapping
+    @MessageMapping("/application")
     @SendTo("/all/messages")
     public Message send(final Message message) throws Exception{
         return message;
